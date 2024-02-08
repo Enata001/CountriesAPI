@@ -1,6 +1,6 @@
-﻿namespace Country.Api.Models.Domain;
+﻿namespace Country.Api.V1.Models.DTO;
 
-public class Country
+public class CountryDto
 {
     public int Id { get; set; }
     public string Name { get; set; } = string.Empty;

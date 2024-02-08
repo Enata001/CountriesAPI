@@ -1,10 +1,10 @@
-﻿using Country.Api.Data;
-using Country.Api.Models.DTO;
+﻿using Country.Api.V1.Data;
+using Country.Api.V1.Models.DTO;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Country.Api.Controllers;
+namespace Country.Api.V1.Controllers;
 [ApiController]
-[Route("api/[controller]")]
+[Route("api/v1/[controller]")]
 
 
 public class CountriesController : ControllerBase
@@ -12,7 +12,7 @@ public class CountriesController : ControllerBase
     [HttpGet]
     public IActionResult Get()
     {
-        var countriesDomainModel = CountriesData.Get();
+        var countriesDomainModel = CountriesDataV1.Get();
         var response = new List<CountryDto>();
 
         foreach (var countryDomain in countriesDomainModel)

@@ -1,16 +1,18 @@
-﻿namespace Country.Api.Data;
+﻿using Country.Api.V2.Models.Domain;
 
-public static class CountriesData
+namespace Country.Api.V1.Data;
+
+public static class CountriesDataV1
 {
     public static List<Models.Domain.Country> Get()
     {
         var countries = new[]
         {
-            new { Id = 1, Name = "United States" },
-            new { Id = 2, Name = "Germany" },
+            new { Id = 1, Name = "Ghana" },
+            new { Id = 2, Name = "Nigeria" },
             new { Id = 3, Name = "Brazil" },
-            new { Id = 4, Name = "China" },
-            new { Id = 5, Name = "Italy" },
+            new { Id = 4, Name = "Jamaica" },
+            new { Id = 5, Name = "England" },
             new { Id = 6, Name = "South Africa" },
             new { Id = 7, Name = "Mexico" },
             new { Id = 8, Name = "Japan" },
@@ -18,6 +20,6 @@ public static class CountriesData
             new { Id = 10, Name = "Australia" },
         };
 
-        return countries.Select(c => new Models.Domain.Country {Id = c.Id, Name = c.Name}).ToList();
+        return countries.Select(c => new Models.Domain.Country() {Id = c.Id, Name = c.Name}).ToList();
     }
 }
