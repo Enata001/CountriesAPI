@@ -8,6 +8,7 @@
     </PropertyGroup>
 
     <ItemGroup>
+        <PackageReference Include="Asp.Versioning.Mvc" Version="6.4.1" />
         <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.25"/>
         <PackageReference Include="Microsoft.AspNetCore.Authentication.OpenIdConnect" Version="6.0.25"/>
         <PackageReference Include="Microsoft.Identity.Web" Version="1.16.0"/>
